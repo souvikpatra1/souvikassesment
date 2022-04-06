@@ -1,0 +1,156 @@
+
+#!/bin/bash
+pwd
+ls
+
+chmod +x b.sh
+
+
+#!/bin/sh
+echo "what is your name?"
+read name
+echo "How do you do, $name?"
+read remark
+echo "I am $remark too!"
+
+
+#!/bin/sh
+
+NAME="Bala"
+echo $NAME
+
+
+#!/bin/sh
+
+NAME="Zara Ali"
+readonly NAME
+NAME="Qadiri"
+
+
+#!/bin/sh
+echo "File Name: $0"
+echo "First Parameter : $1"
+echo "Second Parameter : $2"
+echo "Quoted Values: $*"
+echo "Total Number of Parameters : $#"
+
+
+#!/bin/sh
+
+for TOKEN in $*
+do
+   echo $TOKEN
+done
+
+for (i=0,i>10,i++)
+{
+printf(i);
+}
+
+
+echo $?
+
+
+#!/bin/sh
+
+NAME[0]="Zara"
+NAME[1]="Qadir"
+NAME[2]="Mahnaz"
+NAME[3]="Ayan"
+NAME[4]="Daisy"
+echo "First Index: ${NAME[0]}"
+echo "Second Index: ${NAME[1]}"
+
+
+#!/bin/sh
+
+NAME[0]="Zara"
+NAME[1]="Qadir"
+NAME[2]="Mahnaz"
+NAME[3]="Ayan"
+NAME[4]="Daisy"
+echo "First Method: ${NAME[*]}"
+
+
+
+#!/bin/sh
+
+a=0
+
+while [ $a -lt 10 ]       while(a < 10)
+do                         {
+   echo $a                  print(a);
+   if [ $a -eq 5 ]           if (a ==5)
+   then                       {   
+      break                      break;
+   fi                          }
+   a=`expr $a + 1`            a+=1;
+done                         }
+
+
+
+#!/bin/sh
+
+a=10
+echo -e "Value of a is $a \n"
+
+
+
+#!/bin/sh
+
+DATE=`date`
+echo "Date is $DATE"
+
+USERS=`who`
+echo "Logged in user are $USERS"
+
+UP=`date ; uptime`
+echo "Uptime is $UP"
+
+
+who > users
+
+
+
+#!/bin/sh
+Hello () {
+   echo "Hello World"
+}
+
+
+Hello
+
+
+#!/bin/sh
+
+# Define your function here
+Hello () {
+   echo "Hello World $1 $2"
+}
+
+# Invoke your function
+Hello Bala K
+
+
+
+#!/bin/sh
+
+# Define your function here
+Hello () {
+   echo "Hello World $1 $2"
+   return 10
+}
+
+# Invoke your function
+Hello Zara Ali
+
+# Capture value returnd by last command
+ret=$?
+
+echo "Return value is $ret
+
+
+sudo systemctl status cron.service
+
+
+*/1 * * * * sh cr.sh
